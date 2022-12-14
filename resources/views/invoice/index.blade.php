@@ -16,12 +16,12 @@
                             <table id="example23" class="display nowrap" cellspacing="0" width="100%">
                                 <thead>
                                 <tr>
-                                    <th>Description</th>
-                                    <th>Durée du Séjour</th>
-                                    <th>Prix unitaire</th>
-                                    <th>Montant Total</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
+                                    <th>{{ __('Description') }}</th>
+                                    <th>{{ __('Durée du Séjour') }}</th>
+                                    <th>{{ __('Prix unitaire') }}</th>
+                                    <th>{{ __('Montant Total') }}</th>
+                                    <th>{{ __('Status') }}</th>
+                                    <th>{{ __('Action') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -33,7 +33,8 @@
                                         <td class="text-center">XAF {{ number_format($item->total_amount) }}</td>
                                         <td class="text-center">{{ $item->status_reservation }}</td>
                                         <td class="text-center">
-                                            <a href="{{ route('invoice.details',$item->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4">
+                                            <a href="{{ route('invoice.details',$item->id) }}"
+                                               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4">
                                                 Details
                                             </a>
                                         </td>
