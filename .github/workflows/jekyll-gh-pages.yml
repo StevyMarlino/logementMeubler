@@ -36,8 +36,11 @@ jobs:
       - name: Update dependencies
         run: composer update --no-dev --prefer-dist --optimize-autoloader
 
+      - name: Install Packjon
+        run: npm install 
+        
       - name: Build assets
-        run: npm run dev
+        run: npm run build
 
       - name: Build for production
         run: php artisan optimize
