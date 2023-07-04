@@ -44,12 +44,15 @@ jobs:
 
       - name: Build for production
         run: php artisan optimize
+        
+      - name: Archive Laravel app
+        run: zip -r laravel-app.zip .
 
       - name: Archive files
         uses: actions/upload-artifact@v2
         with:
           name: laravel-app
-          path: .
+          path: laravel-app.zip
 
   # Deployment job
   deploy:
